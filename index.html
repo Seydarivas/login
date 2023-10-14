@@ -10,28 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website With Login And Register | Codehal</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+
   </head>
-
-
-  
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyCit2M8eAl90WspOGJmf8U3yESzD_1dZA8",
-      authDomain: "fir-login-a4d04.firebaseapp.com",
-      projectId: "fir-login-a4d04",
-      storageBucket: "fir-login-a4d04.appspot.com",
-      messagingSenderId: "610307847179",
-      appId: "1:610307847179:web:a1bdf5af2910d30ff7830e",
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-
-  </script>
-   <script type="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js"></script>
-
   <body>
     <header class="header">
       <a href="#" class="logo">Logo</a>
@@ -76,7 +56,7 @@
                   >Forgot password?</a
                 >
               </div>
-              <button type="submit" class="btn" onclick="login()">Login</button>
+              <button type="submit" class="btn"  id="login">Login</button>
 
               <div class="logreg-link">
                 <p>
@@ -86,12 +66,13 @@
               </div>
 
               <div class="media-options">
-                <a href="#">
-                  <i class="fa-brands fa-google"></i>
+                <a href="#" id="google">
+                 <i class="fa-brands fa-google" id="google"></i>
                   <span>Login with Google</span>
+                  <!-- <button type="submit" class="btn"  id="google">Login with google</button> -->
                 </a>
 
-                <a href="#">
+                <a href="#" id="facebook">
                   <i class="fa-brands fa-facebook"></i>
                   <span>Login with Facebook</span>
                 </a>
@@ -100,7 +81,7 @@
           </div>
 
           <!-- recuperar contraseña -->
-          <!--<div class="form-box password">
+          <div class="form-box password">
                     <div class="logreg-title">
                         <h2>Recover password</h2>
                         <p>Please provide the following to change your password</p>
@@ -108,13 +89,13 @@
                     <form action="#">
                         <div class="input-box">
                             <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                            <input type="text" required>
-                            <label>Full Name</label>
+                            <input type="email" required>
+                            <label>email</label>
                         </div>
     
                         <div class="input-box">
                             <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                            <input type="new password" required>
+                            <input type="password" required>
                             <label>New password</label>
                         </div>
     
@@ -128,13 +109,10 @@
                                 <label> <input type="checkbox">Accept</label>
     
                             </div>
-                            <button type = "submit" class="btn">Change password</button>
+                            <button type = "button" class="btn" id="volver">Change password</button>
     
-                            <div class="logreg-link">
-                                <p>Already have an account? <a href="#" class="login-link">Login</a></p>
-                            </div>
                     </form>
-                </div> -->
+                </div> 
 
           <div class="form-box register">
             <div class="logreg-title">
@@ -166,7 +144,7 @@
                   conditions</label
                 >
               </div>
-              <button type="submit" class="btn" onclick="register()">Register</button>
+              <button type="submit" class="btn" id="registrar">Register</button>
 
               <div class="logreg-link">
                 <p>
@@ -181,6 +159,6 @@
     </section>
 
     <script src="script.js"></script>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

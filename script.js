@@ -22,36 +22,38 @@ iconClose.onclick = () => {
     wrapper.classList.remove('active');
 };
 
-/*const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+//ir al cambiar contraseña
+const forgotPassword = document.getElementById('forgotPasswordLink');
 const passwordForm = document.querySelector('.form-box.password'); // Selecciona el formulario de recuperación de contraseña
 
-forgotPasswordLink.onclick = () => {
-    // Oculta el formulario de inicio de sesión y el formulario de registro (si están visibles)
+forgotPassword.onclick = () => {
     document.querySelector('.form-box.login').style.display = 'none';
-    document.querySelector('.form-box.register').style.display = 'none';
-
-    // Muestra el formulario de recuperación de contraseña
     passwordForm.style.display = 'block';
-};*/
+};
+ //volver al login
+const backToLoginButton = document.getElementById('volver');
+backToLoginButton.addEventListener('click', () => {
+  
+  document.querySelector('.form-box.login').style.display = 'block';
 
-// const signupForm = document.getElementById('login()');
+  passwordForm.style.display = 'none';
+});
+
+
+
+// const signupForm = document.querySelector('#signup-form');
 
 // signupForm.addEventListener('submit', (e) => {
 //     e.preventDefault();
 
-//     const email = document.querySelector('#email').value;
-//     const password = document.querySelector('#password').value;
-    
+//     const email = document.querySelector('#signup-email').value;
+//     const password = document.querySelector('#signup-password').value;
 
-//     auth
-//     .createUserWithEmailAndPassword(email, password)
-//     .then(userCredential => {
-//       console.log('Usuario registrado exitosamente');
-//     })
-//     .catch(error => {
-//       console.error('Error al registrar el usuario:', error.message);
-//     });
-
+//       auth
+//           .createUserWithEmailAndPassword(email, password)
+//           .then(userCredential => {
+//             console.log('sign up')
+//           })
 // })
 
 
