@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script
+      src="https://kit.fontawesome.com/5977472900.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website With Login And Register | Codehal</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+
+  
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCit2M8eAl90WspOGJmf8U3yESzD_1dZA8",
+      authDomain: "fir-login-a4d04.firebaseapp.com",
+      projectId: "fir-login-a4d04",
+      storageBucket: "fir-login-a4d04.appspot.com",
+      messagingSenderId: "610307847179",
+      appId: "1:610307847179:web:a1bdf5af2910d30ff7830e",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+  </script>
+   <script type="module" src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js"></script>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Logo</a>
+
+      <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <button class="btnLogin-popup">Login</button>
+      </nav>
+    </header>
+
+    <section class="section">
+      <div class="wrapper">
+        <span class="icon-close">
+          <i class="fa-solid fa-xmark"></i>
+        </span>
+
+        <div class="logreg-box">
+          <div class="form-box login">
+            <div class="logreg-title">
+              <h2>Login</h2>
+              <p>Please login to use the platform</p>
+            </div>
+            <form action="#" id="signup-form">
+              <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" required id="email" />
+                <label>Email</label>
+              </div>
+
+              <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" required id="password" />
+                <label>Password</label>
+              </div>
+
+              <div class="remember-forgot">
+                <label> <input type="checkbox" />Remember me</label>
+                <a href="#" class="password-link" id="forgotPasswordLink"
+                  >Forgot password?</a
+                >
+              </div>
+              <button type="submit" class="btn" onclick="login()">Login</button>
+
+              <div class="logreg-link">
+                <p>
+                  Don't have an account?
+                  <a href="#" class="register-link">Register</a>
+                </p>
+              </div>
+
+              <div class="media-options">
+                <a href="#">
+                  <i class="fa-brands fa-google"></i>
+                  <span>Login with Google</span>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                  <span>Login with Facebook</span>
+                </a>
+              </div>
+            </form>
+          </div>
+
+          <!-- recuperar contraseña -->
+          <!--<div class="form-box password">
+                    <div class="logreg-title">
+                        <h2>Recover password</h2>
+                        <p>Please provide the following to change your password</p>
+                    </div>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                            <input type="text" required>
+                            <label>Full Name</label>
+                        </div>
+    
+                        <div class="input-box">
+                            <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                            <input type="new password" required>
+                            <label>New password</label>
+                        </div>
+    
+                            <div class="input-box">
+                                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                                <input type="password" required>
+                                <label>Repeat password</label>
+                            </div>
+    
+                            <div class="remember-forgot">
+                                <label> <input type="checkbox">Accept</label>
+    
+                            </div>
+                            <button type = "submit" class="btn">Change password</button>
+    
+                            <div class="logreg-link">
+                                <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                            </div>
+                    </form>
+                </div> -->
+
+          <div class="form-box register">
+            <div class="logreg-title">
+              <h2>Registration</h2>
+              <p>Please provide the following to verify your identity</p>
+            </div>
+            <form action="#">
+              <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-user"></i></span>
+                <input type="text" required id="name"/>
+                <label>Full Name</label>
+              </div>
+
+              <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" required id="email2"/>
+                <label>Email</label>
+              </div>
+
+              <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" required id="password2"/>
+                <label>Password</label>
+              </div>
+
+              <div class="remember-forgot">
+                <label>
+                  <input type="checkbox" />I agree to the terms &
+                  conditions</label
+                >
+              </div>
+              <button type="submit" class="btn" onclick="register()">Register</button>
+
+              <div class="logreg-link">
+                <p>
+                  Already have an account?
+                  <a href="#" class="login-link">Login</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
